@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-void inputdata(float** arr, float k, float n) {
+void inputdata(float** arr, int k, int n) {
 	ifstream inputFile("InputData.csv");
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < k; ++j) {
@@ -15,7 +15,7 @@ void inputdata(float** arr, float k, float n) {
 	}
 }
 
-void calculate_average(float** arr, float k, float n, float average[]) {
+void calculate_average(float** arr, int k, int n, float average[]) {
 	for (int j = 0; j < k; ++j) {
 		float sum = 0.0;
 		for (int i = 0; i < n; ++i) {
@@ -24,7 +24,7 @@ void calculate_average(float** arr, float k, float n, float average[]) {
 		average[j] = sum / n;
 	}
 }
-void time_error(float** arr, float k, float n, float average[], float terror[]) {
+void time_error(float** arr, int k, int n, float average[], float terror[]) {
 	for (int j = 0; j < k; ++j) {
 		float sum = 0.0;
 		for (int i = 0; i < n; ++i) {
@@ -33,14 +33,14 @@ void time_error(float** arr, float k, float n, float average[], float terror[]) 
 		terror[j] = sqrt(sum / ((n - 1) * n));
 	}
 }
-void acceleration(float** arr, float k, float n, float average[], float terror[], float g[]) {
+void acceleration(float** arr, int k, int n, float average[], float terror[], float g[]) {
 	float h = 0.272;
 	float v0 = 1.050;
 	for (int j = 0; j < k; ++j) {
 		g[j] = 2 * (h - (v0 * average[j] / 1000)) / pow(average[j] / 1000, 2);
 	}
 }
-void gerror_calc(float** arr, float k, float n, float average[], float terror[], float g[], float gerror[]) {
+void gerror_calc(float** arr, int k, int n, float average[], float terror[], float g[], float gerror[]) {
 
 	for (int j = 0; j < k; ++j) {
 		float v0 = 1.050;
@@ -59,7 +59,7 @@ void gerror_calc(float** arr, float k, float n, float average[], float terror[],
 }
 
 
-void outputdata(float** arr, float k, float n, float average[], float terror[], float g[], float gerror[]) {
+void outputdata(float** arr, int k, int n, float average[], float terror[], float g[], float gerror[]) {
 	ofstream outputFile("OutputData.csv");
 	calculate_average(arr, k, n, average);
 	time_error(arr, k, n, average, terror);

@@ -12,8 +12,4 @@ C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(54,13): warning C4244: 
 C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(55,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
 C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(56,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
 C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(57,19): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(97,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(97,18): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(98,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\Users\belob\Workshop4\Program\acceleration\Source.cpp(98,19): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   acceleration.vcxproj -> C:\Users\belob\Workshop4\Program\x64\Debug\acceleration.exe
